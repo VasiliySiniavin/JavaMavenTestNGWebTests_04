@@ -62,8 +62,7 @@ public class WebTest {
         WebDriver driver = new ChromeDriver();
 
         driver.get(URL);
-        WebElement MainMenu = driver.findElement(
-                By.xpath("//body/div[@id='wrap']/div[@id='header']/h1"));
+        WebElement MainMenu = driver.findElement(By.xpath("//body/div[@id='wrap']/div[@id='header']/h1"));
 
         MainMenu.click();
 
@@ -180,21 +179,17 @@ public class WebTest {
         WebDriver driver = new ChromeDriver();
 
         driver.get(URL);
-        driver.findElement(
-                By.xpath("//body//li/a[@href='team.html']")).click();
+        driver.findElement(By.xpath("//body//li/a[@href='team.html']")).click();
 
         String[] actualResult = new String[3];
 
-        WebElement FirstPoint = driver.findElement(
-                By.xpath("//body//h3[text()='Oliver Schade']"));
+        WebElement FirstPoint = driver.findElement(By.xpath("//body//h3[text()='Oliver Schade']"));
         actualResult[0] = FirstPoint.getText();
 
-        WebElement SecondPoint = driver.findElement(
-                By.xpath("//body//h3[text()='Gregor Scheithauer']"));
+        WebElement SecondPoint = driver.findElement(By.xpath("//body//h3[text()='Gregor Scheithauer']"));
         actualResult[1] = SecondPoint.getText();
 
-        WebElement ThirdPoint = driver.findElement(
-                By.xpath("//body//h3[text()='Stefan Scheler']"));
+        WebElement ThirdPoint = driver.findElement(By.xpath("//body//h3[text()='Stefan Scheler']"));
         actualResult[2] = ThirdPoint.getText();
 
         Assert.assertEquals(actualResult, expectedResult);
@@ -222,11 +217,9 @@ public class WebTest {
         WebDriver driver = new ChromeDriver();
 
         driver.get(URL);
-        driver.findElement(
-                By.xpath("//body//li/a[@href='/submitnewlanguage.html']")).click();
+        driver.findElement(By.xpath("//body//li/a[@href='/submitnewlanguage.html']")).click();
 
-        WebElement FirstPoint = driver.findElement(
-                By.xpath("//body//p/select[@name='category']"));
+        WebElement FirstPoint = driver.findElement(By.xpath("//body//p/select[@name='category']"));
 
         String actualResult = FirstPoint.getText();
 
@@ -252,11 +245,9 @@ public class WebTest {
         WebDriver driver = new ChromeDriver();
 
         driver.get(URL);
-        driver.findElement(
-                By.xpath("//body//li/a[@href='/submitnewlanguage.html']")).click();
+        driver.findElement(By.xpath("//body//li/a[@href='/submitnewlanguage.html']")).click();
 
-        driver.findElement(
-                By.xpath("//body//input[@type='submit']")).click();
+        driver.findElement(By.xpath("//body//input[@type='submit']")).click();
 
         WebElement ErrorMessage = driver.findElement(
                 By.xpath("//body//p[@style='border: 1px solid red; background-color: #ffe0e0; padding: 5px; margin: 5px 10px 5px 10px;']"));
@@ -422,8 +413,7 @@ public class WebTest {
 
         driver.get(URL);
 
-        driver.findElement(
-                By.xpath("//body//li/a[@href='/submitnewlanguage.html']")).click();
+        driver.findElement(By.xpath("//body//li/a[@href='/submitnewlanguage.html']")).click();
 
         WebElement refStyle = driver.findElement(By.xpath("//body//li/span"));
 
