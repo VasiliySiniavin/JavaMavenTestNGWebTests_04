@@ -38,9 +38,9 @@ public class WebTest {
 
         menuStart.click();
 
-        WebElement h2 = driver.findElement(By.xpath("//body/div[@id='wrap']/div[@id='main']/h2")
+        WebElement h1 = driver.findElement(By.xpath("//body/div[@id='wrap']/div[@id='main']/h2")
         );
-        String actualResult = h2.getText();
+        String actualResult = h1.getText();
 
         Assert.assertEquals(actualResult, expectedResult); // сравнивает ожидаемый и фактический результаты
 
